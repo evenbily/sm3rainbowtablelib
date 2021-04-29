@@ -69,7 +69,7 @@ unsigned char* pack(unsigned char* input,
 	output[length] = 0x80;
 	memset((void*)(output + length + 1), 0, k);
 	memcpy(output + length + 1 + k, clength, 8);
-
+	free(output);
 	return output;
 }
 
